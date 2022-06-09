@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+ {% block body_block %}
+ <h1>Life Changing Book</h1>
+   {%for book in book_list %}
+    <ul>
+      <li><a href="/{{book.id}}">{{book.Name}}</a></li>
+    </ul>
+   {% endfor %}
+   <a class="btn btn-primary" href="/create">InsertNewRecord</a>
+ {% endblock %}
